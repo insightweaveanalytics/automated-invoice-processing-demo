@@ -1,0 +1,11 @@
+INVOICE
+Invoice Number: IW-2026-004
+Invoice Date: 2026-02-08
+Vendor: Juniper Stationery Works
+Bill To: Northstar Foods
+Currency: INR
+
+Description: Notebooks and folders
+Subtotal: 1,850.00
+Tax: 333.00
+Total:

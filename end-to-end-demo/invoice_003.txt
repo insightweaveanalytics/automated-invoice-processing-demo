@@ -1,0 +1,11 @@
+INVOICE
+Invoice Number: IW-2026-003
+Invoice Date: 2026-02-02
+Vendor: Meridian Cloud Tools
+Bill To: Northstar Foods
+Currency: INR
+
+Description: Monthly software subscription
+Subtotal: 10,000.00
+Tax: 2,000.00
+Total: 12,000.00

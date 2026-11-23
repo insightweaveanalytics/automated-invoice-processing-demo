@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local, synthetic-data invoice processing demonstration.">
+  <title>Invoice Processing Demo | InsightWeave Analytics</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">IW</div>
+    <div class="brand-name">InsightWeave Analytics</div>
+    <div class="topbar-note">Portfolio demonstration · Synthetic data</div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">INVOICE AUTOMATION</p>
+      <h1>From invoice text to an organized review sheet.</h1>
+      <p class="hero-copy">Extract common invoice fields, catch incomplete records, and export a CSV summary. This browser demo uses fictional data and does not send your files anywhere.</p>
+      <div class="scope-note"><span class="scope-dot"></span><span>Text invoices only. OCR and PDF/image extraction are not included in this demo.</span></div>
+    </section>
+
+    <section class="workbench" aria-labelledby="workbench-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">WORKSPACE</p><h2 id="workbench-heading">Process invoices</h2></div>
+        <span class="privacy-pill">Runs locally in your browser</span>
+      </div>
+      <div class="input-row">
+        <div class="drop-card" id="drop-card">
+          <div class="upload-icon" aria-hidden="true">↑</div>
+          <div><strong>Choose invoice text files</strong><p>Drop .txt files here or browse your device</p></div>
+          <label class="button button-secondary" for="file-input">Browse files</label>
+          <input id="file-input" type="file" accept=".txt,text/plain" multiple>
+        </div>
+        <div class="input-actions">
+          <button class="button button-primary" id="sample-button" type="button">Load synthetic samples</button>
+          <button class="button button-quiet" id="clear-button" type="button">Clear results</button>
+        </div>
+      </div>
+
+      <div class="summary-grid" aria-live="polite">
+        <article class="metric"><span class="metric-label">FILES PROCESSED</span><strong id="processed-count">0</strong><span class="metric-foot">Text files read</span></article>
+        <article class="metric"><span class="metric-label">READY</span><strong id="ready-count">0</strong><span class="metric-foot">Required fields found</span></article>
+        <article class="metric metric-warn"><span class="metric-label">NEEDS REVIEW</span><strong id="review-count">0</strong><span class="metric-foot">Check the highlighted issues</span></article>
+        <article class="metric metric-total"><span class="metric-label">VALID TOTALS</span><strong id="total-value">—</strong><span class="metric-foot">Ready records, grouped by currency</span></article>
+      </div>
+
+      <div class="results-head"><div><h2>Extracted records</h2><p id="results-hint">Load the synthetic samples or choose your own .txt invoices.</p></div><button id="export-button" class="button button-primary" type="button" disabled>Download CSV</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Invoice</th><th>Date</th><th>Vendor</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead>
+          <tbody id="results-body"><tr class="empty-row"><td colspan="6">No invoices processed yet.</td></tr></tbody>
+        </table>
+      </div>
+      <div class="review-panel" id="review-panel" hidden>
+        <div class="review-heading"><span class="review-icon">!</span><div><h3>Needs review</h3><p>These files were kept in the CSV with their issues listed.</p></div></div>
+        <ul id="review-list"></ul>
+      </div>
+      <div class="method-note"><strong>How this demo works:</strong> It reads labeled text fields, normalizes amounts, checks required fields and duplicate invoice numbers, then exports the extracted records and review notes to CSV.</div>
+    </section>
+    <footer>InsightWeave Analytics · Built with fictional sample invoices · No client data</footer>
+  </main>
+</body>
+</html>

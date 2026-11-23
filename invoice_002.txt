@@ -1,0 +1,11 @@
+INVOICE
+Invoice Number: IW-2026-002
+Invoice Date: 2026-01-21
+Vendor: Cedarline Office Mart
+Bill To: Northstar Foods
+Currency: INR
+
+Description: Office supplies
+Subtotal: 6,525.00
+Tax: 774.50
+Total: 7,299.50

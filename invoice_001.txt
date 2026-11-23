@@ -1,0 +1,11 @@
+INVOICE
+Invoice Number: IW-2026-001
+Invoice Date: 2026-01-15
+Vendor: Blue Harbor Supplies
+Bill To: Northstar Foods
+Currency: INR
+
+Description: Packaging materials
+Subtotal: 16,500.00
+Tax: 1,950.00
+Total: 18,450.00
